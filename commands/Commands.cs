@@ -13,13 +13,15 @@ namespace OmniaPvP.commands
         [Command("ip")]
         public async Task IP(CommandContext ctx)
         {
-            await ctx.Channel.SendMessageAsync($"Hola {ctx.User.Username} laa ip del servidor es `play.omniapvp.com`");
+            await ctx.Channel.SendMessageAsync($"Hola {ctx.User.Username} la IP del servidor es `omniapvp.com`");
         }
         [Command("Borrar")]
-        public async Task Borrar (CommandContext ctx, int cantidad)
+        public async Task Borrar(CommandContext ctx, int cantidad)
         {
-            if(ctx.Member.Roles.Any(r => r.Name == "Staff"))
-                {
+            var allowedRoles = new[] { "Owner", "All Perms", "Manager" };
+
+            if(ctx.Member.Roles.Any(r => allowedRoles.Contains(r.Name)))
+            {
                 var messages = await ctx.Channel.GetMessagesAsync(cantidad);
                 await ctx.Channel.DeleteMessagesAsync(messages);
             }
@@ -28,6 +30,7 @@ namespace OmniaPvP.commands
                 await ctx.Channel.SendMessageAsync("No tienes permisos para usar este comando");
             }
         }
+
        
     }
 }
