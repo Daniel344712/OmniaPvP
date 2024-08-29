@@ -13,7 +13,7 @@ namespace OmniaPvP.commands
         [Command("ip")]
         public async Task IP(CommandContext ctx)
         {
-            await ctx.Channel.SendMessageAsync($"Hola {ctx.User.Username} la ip del servidor es `play.omniapvp.com`");
+            await ctx.Channel.SendMessageAsync($"Hola {ctx.User.Username} laa ip del servidor es `play.omniapvp.com`");
         }
         [Command("Borrar")]
         public async Task Borrar (CommandContext ctx, int cantidad)
