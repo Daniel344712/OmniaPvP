@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("OmniaPvP")]
-[assembly: AssemblyCopyright("Copyright ©  2024")]
+[assembly: AssemblyCopyright("© 2024, OmniaPvP - Todos los derechos reservados")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
